@@ -14,6 +14,7 @@ export const OverviewContainer = () => {
                     user={object.user}
                     audienceType={object.audienceType}
                     audience={object.audience}
+                    network={object.network}
                 />
             )
         }
