@@ -5,7 +5,7 @@ console.log(data.overview)
 
 export const OverviewContainer = () => {
   return (
-    <section>
+    <section className='absolute top-[191px] left-0 right-0'>
         {
             data.overview.map(object =>
                 
@@ -15,6 +15,8 @@ export const OverviewContainer = () => {
                     audienceType={object.audienceType}
                     audience={object.audience}
                     network={object.network}
+                    isUp={object.isUp}
+                    today={object.today}
                 />
             )
         }
