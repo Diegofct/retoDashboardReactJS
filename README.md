@@ -12,7 +12,7 @@ Este repositorio contiene un proyecto creado con Vite, React y TailwindCSS.
 1.  Clona el repositorio:
 
 ```
-git clone https://github.com/tu-usuario/tu-repositorio.git
+https://github.com/Diegofct/retoDashboard.git
 
 ```
 
