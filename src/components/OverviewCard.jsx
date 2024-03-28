@@ -21,7 +21,7 @@ const networkColors = {
 
 export const OverviewCard = ({user, audienceType, audience, network, isUp, today}) => {
   return (
-    <article className="bg-Light-Grayish-Blue w-[256px] h-[216px] mb-12 rounded-[5px] mx-auto overflow-hidden text-center dark:bg-Dark-Desaturated-Blue hover:brightness-95 cursor-pointer hover:dark:brightness-125">
+    <article className="bg-Light-Grayish-Blue w-[326px] h-[216px] mb-12 rounded-[5px] mx-auto overflow-hidden text-center dark:bg-Dark-Desaturated-Blue hover:brightness-95 cursor-pointer hover:dark:brightness-125">
         <div className={`${networkColors[network]} h-1 mb-8`}></div>
         <div className='flex justify-center items-center gap-2'>
           <img src={networkLogos[network]} alt={`logo ${network}`} />
@@ -36,3 +36,22 @@ export const OverviewCard = ({user, audienceType, audience, network, isUp, today
     </article>
   )
 }
+
+export const OverviewTodayCard = ({network, statsType, stats, porcentage, isUp}) => {
+  return (
+    <article className='bg-Light-Grayish-Blue w-[326px] h-[125px] mb-4 mx-auto rounded-[5px] p-[27px] cursor-pointer hover:brightness-95 dark:bg-Dark-Desaturated-Blue hover:dark:brightness-125 '>
+      <div className='flex items-center justify-between'>
+        <p className='text-Dark-Grayish-Blue'>{statsType}</p>
+        <img src={networkLogos[network]} alt="" />
+      </div>
+      <div className='flex items-center justify-between'>
+        <p className='text-[42px] font-bold text-Very-Dark-Blue dark:text-white'>{stats}</p>
+        <div className='flex items-center justify-center gap-1'>
+          <img src={isUp ? iconUp : iconDown} alt="icon arrow" />
+          <p className={`text-xs font-bold ${isUp ? 'text-Lime-Green' : 'text-Bright-Red'}`}>{porcentage} Today</p>
+        </div>
+      </div>
+    </article>
+  )
+}
+
